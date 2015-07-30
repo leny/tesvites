@@ -24,22 +24,13 @@ Using **tesvites** is simple :
 
     Options:
 
-        -h, --help             output usage information
-        -V, --version          output the version number
-
-        **TODO**
-
-#### Options
-
-**TODO**
-
-##### help (`-h`,`--help`)
-
-Output usage information.
-
-##### version (`-v`,`--version`)
-
-Output **tankipas**' version number.
+        -h, --help                     output usage information
+        -V, --version                  output the version number
+        -m, --max-time <max-time>      The maximum length of a single test run (upload or download)
+        -p, --ping-count <ping-count>  The number of close servers to ping to find thew fastest one
+        -s, --servers <servers>        The number of servers to run a download test on. The fastest is used for the upload test and the fastest result is reported at the end.
+        -i, --id <server-id>           ID of the server to restrict the tests against.
+        -l, --log-output               Show the complete output of the test.
 
 ## Contributing
 
@@ -47,10 +38,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-* **0.1.0**: Initial release (*02/07/14*)
-
-### TODO
-
+* **0.1.0**: Initial release (*30/07/15*)
 
 ## License
 Copyright (c) 2015 Leny  
