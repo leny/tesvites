@@ -38,6 +38,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+* **0.2.0**: Add duration & starting date (*28/08/15*)
 * **0.1.0**: Initial release (*30/07/15*)
 
 ## License
