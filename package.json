@@ -47,6 +47,8 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "commander": "^2.8.1",
+    "duration": "^0.2.0",
+    "moment": "^2.10.6",
     "speedtest-net": "^1.0.3"
   }
 }

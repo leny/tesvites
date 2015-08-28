@@ -13,6 +13,8 @@
 pkg = require "../package.json"
 
 speedtest = require "speedtest-net"
+Duration = require "duration"
+moment = require "moment"
 chalk = require "chalk"
 error = chalk.bold.red
 
@@ -38,12 +40,18 @@ options.servers = program.servers if program.servers
 options[ "server-id" ] = program[ "server-id" ] if program[ "server-id" ]
 options[ "log" ] = !!program[ "log-output" ] if program[ "log-output" ]
 
+# --- start test
+dStart = new Date
+
 speedtest.visual options, ( error, results ) ->
+  oDuration = new Duration dStart, ( new Date )
   if error
     console.log chalk.red.underline "error:"
     console.log error.message
     process.exit 1
   console.log chalk.underline "results:"
+  console.log "  started:", chalk.cyan ( moment dStart ).format "DD MMMM YYYY, HH:mm:ss"
+  console.log "  duration:", chalk.cyan oDuration.toString 1, 1
   console.log "  ping:", chalk.cyan "#{ results.server.ping } ms"
   console.log "  download:", chalk.cyan "#{ results.speeds.download } Mbps"
   console.log "  upload:", chalk.cyan "#{ results.speeds.upload } Mbps"
