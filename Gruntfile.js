@@ -29,9 +29,6 @@ module.exports = function( grunt ) {
                 } ]
             }
         },
-        "nodeunit": {
-            "files": [ "test/**/*_test.js" ]
-        },
         "watch": {
             "src": {
                 "files": "src/**/¨.js",
@@ -40,12 +37,9 @@ module.exports = function( grunt ) {
         }
     } );
 
-    grunt.registerTask( "test", [ "nodeunit" ] );
-
     grunt.registerTask( "default", [
         "eslint",
-        "babel",
-        "test"
+        "babel"
     ] );
 
     grunt.registerTask( "work", [
